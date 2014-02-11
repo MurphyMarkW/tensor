@@ -1,0 +1,17 @@
+This is an attempt at a (relatively) high performance tensor library, utilizing
+expression templates (currently to-be-added) and variadic templating from the
+C++11 standard. The goal is to produce a multi-dimensional array (vector)
+interface that is as syntactically simple to use as possible without sacrificing
+performance.
+
+To potential users: While I will be striving to match the performance of the
+Boost library's multi_array, I would strongly suggest using Boost over this. If
+the use of the Boost library is permissible in your case, it will afford you a
+greater amount of performance and flexibility than is currently possible with
+anything in this library. As well, the Boost library has been thoroughly tested
+and optimized for performance, while this is still in the implementation phase.
+
+Sep. 19th:
+Just pushed a major overhaul I've been working on. Progress stalled due to a new
+job at U.Chicago, so I figured I'd throw this up for now. Needs to be tested and
+needs expression templating for basic tensor operations.
