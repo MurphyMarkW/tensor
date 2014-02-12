@@ -47,13 +47,12 @@ class TensorMixin : public TensorExpression<TensorMixin<O,N,P...>,N,P...> {
   // Constructors.
   public:
     TensorMixin();
+    template <typename... Etc>
+    TensorMixin(size_type i, Etc... etc);
     template <typename E, template <typename...> class n, typename... p>
     TensorMixin(TensorExpression<E,n,p...> const&);
     template <typename E, template <typename...> class n, typename... p>
     TensorMixin(TensorExpression<E,n,p...>      &);
-    template <typename... I,
-              typename = typename enable_if<(sizeof...(I)==O),void>::type>
-    TensorMixin(I...);
   protected:
     template <typename... I>
     void _TensorMixin(size_type,I...);
