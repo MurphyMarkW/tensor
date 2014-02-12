@@ -5,8 +5,8 @@
 
   # C and C++ compilers, respectively.
   GCC = gcc
-  #CXX = g++
-  CXX = g++-mp-4.8
+  CXX = g++
+  #CXX = g++-mp-4.8
 
   # Extra compiler flags to use.
   GCCEXTRA = -O3 -D DEBUG

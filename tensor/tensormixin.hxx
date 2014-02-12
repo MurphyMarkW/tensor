@@ -40,10 +40,11 @@ TensorMixin<O,N,P...>::TensorMixin(TensorExpression<E,n,p...>      & te) {
 };
 
 template <intmax_t O, template <typename...> class N, typename... P>
-template <typename... I, typename _enabler>
-TensorMixin<O,N,P...>::TensorMixin(I... i) {
+template <typename... Etc>
+TensorMixin<O,N,P...>::TensorMixin(size_type i, Etc... etc) {
   static_assert(O>0,"tensor order must be greater than 0");
-  _TensorMixin(i...);
+  static_assert(sizeof...(Etc)==O-1,"num of args to constructor must equal tensor order");
+  _TensorMixin(i,etc...);
   _data.resize(size(0)*stride(0));
 };
 

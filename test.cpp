@@ -30,7 +30,6 @@ int main() {
       a(i,j) = 0.75*(double)(i*a.size(1));
     }
   }
-
   int v = 1;
   a = a+a;
 
