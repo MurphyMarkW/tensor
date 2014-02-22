@@ -12,9 +12,9 @@
 namespace tensor {
 
 template <typename T, intmax_t O>
-class Tensor : public TensorMixin<O,std::vector,T> {
+class tensor : public TensorMixin<O,std::vector,T> {
   /**
-   *  Tensor - Full implementation of std::vector based tensor.
+   *  tensor - Full implementation of std::vector based tensor.
    *  Parameters:
    *    T - Element type
    *    O - Tensor order

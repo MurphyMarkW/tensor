@@ -31,7 +31,7 @@ class TensorException : public std::exception {};
  *    O - Tensor order
 **/
 template <typename T, intmax_t O>
-class Tensor;
+class tensor;
 
 /**
  * TensorMixin - Mixin that exposes tensor syntax.
