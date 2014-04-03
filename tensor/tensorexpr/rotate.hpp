@@ -8,14 +8,14 @@ namespace tensor {
 template <intmax_t I, typename E, template <typename...> class N, typename... P>
 class RotateExpression;
 
-#define L I % E::order()
+#define L E::order() - (I % E::order())
 template <intmax_t I, typename E, template <typename...> class N, typename... P>
 auto rotl(TensorExpression<E,N,P...> const& t) -> RotateExpression<L,E,N,P...> const {
   return RotateExpression<L,E,N,P...>(t);
 };
 #undef L
 
-#define R E::order() - (I % E::order())
+#define R I % E::order()
 template <intmax_t I, typename E, template <typename...> class N, typename... P>
 auto rotr(TensorExpression<E,N,P...> const& t) -> RotateExpression<R,E,N,P...> const {
   return RotateExpression<R,E,N,P...>(t);

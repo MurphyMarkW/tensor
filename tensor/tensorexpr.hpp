@@ -46,6 +46,7 @@ class TensorExpression : public TensorBase {
 
 #include "tensorexpr/arithmetic.hpp"
 #include "tensorexpr/rotate.hpp"
+#include "tensorexpr/extend.hpp"
 //#include "tensorexpr/lr.hpp"
 
 #endif//__TENSOREXPR_HPP__
