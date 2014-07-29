@@ -50,19 +50,5 @@ int main() {
   }
   cout << endl;
 
-  auto c = tensor::extl<1,tensor::Side::Right>(a);
-  cout << "c = tensor::extl<1>(a)" << endl;
-  cout << "c.size(): " << c.size() << endl;
-  cout << "c.size(0): " << c.size(0) << endl;
-  cout << "c.size(1): " << c.size(1) << endl;
-
-  for(int i = 0; i < c.size(0); ++i) {
-    for(int j = 0; j < c.size(1); ++j) {
-      cout << c(0,i,j) << '\t';
-    }
-    cout << endl;
-  }
-  cout << endl;
-
   return 0;
 }
